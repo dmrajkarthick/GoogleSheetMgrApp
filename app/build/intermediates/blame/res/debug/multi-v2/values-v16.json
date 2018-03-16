@@ -1,0 +1,72 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/rkarthic/Downloads/rkarthic/AndroidStudioProjects/TimeSheet/C:\\Users\\rkarthic\\AndroidStudioProjects\\TimeSheet\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
+            "map": [
+                {
+                    "source": "/Users/rkarthic/Downloads/rkarthic/AndroidStudioProjects/TimeSheet/C:\\Users\\rkarthic\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\48f958e5e76d4b1e3c82fa8850ea9f36\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "121",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "/Users/rkarthic/Downloads/rkarthic/AndroidStudioProjects/TimeSheet/C:\\Users\\rkarthic\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\fd97eac9fd7df9a1995e3b10ecfdac0c\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/rkarthic/Downloads/rkarthic/AndroidStudioProjects/TimeSheet/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
+            "map": [
+                {
+                    "source": "/Users/rkarthic/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b2b823af5a2d3b6198de0d038548dfe7/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "121",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "/Users/rkarthic/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/6b68d96fd2ddf6ccbf5acc2a94587d32/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                }
+            ]
+        }
+    ]
+}
