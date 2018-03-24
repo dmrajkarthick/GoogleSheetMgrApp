@@ -5,7 +5,11 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -28,12 +32,27 @@ public class ReadAllData extends AppCompatActivity{
 
     private ListView listView;
     private ArrayList<ReadAllDataModel> list;
-    private ReadAllDataAdapter adapter;
+    private RecyclerView.Adapter adapter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.read_all_data);
+
+
+        list = new ArrayList<>();
+        adapter = new ReadAllDataAdapter(this, list);
+
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.sectioned_recycler_view);
+        recyclerView.setHasFixedSize(true);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
+        recyclerView.setLayoutManager(linearLayoutManager);
+
+
+        recyclerView.setAdapter(adapter);
+        new ReadData1().execute();
+
+
     }
 
 
@@ -127,20 +146,20 @@ public class ReadAllData extends AppCompatActivity{
                                 //JSONObject phoneObject = innerObject.getJSONObject(Keys.KEY_PHONE);
                                 //String phone = phoneObject.getString(Keys.KEY_MOBILE);
 
-                                model.setJob_number(job_number);
-                                model.setDate_time(date_time);
-                                model.setClient(client);
-                                model.setJob_type(job_type);
-                                model.setSite_id_lr_code(site_id_lr_code);
-                                model.setSite_name(site_name);
-                                model.setTravel_to_site(travel_to_site);
-                                model.setTravel_from_site(travel_from_site);
-                                model.setOdometer_reading(odometer_reading);
-                                model.setKilometers(kilometers);
-                                model.setStart_time(start_time);
-                                model.setEnd_time(end_time);
-                                model.setBreak_time(break_time);
-                                model.setHours_on_site(hours_on_site);
+                                model.setJob_number("Job Number: " + job_number);
+                                model.setDate_time("Date/Time: " + date_time);
+                                model.setClient("Client: " + client);
+                                model.setJob_type("Job Type: " + job_type);
+                                model.setSite_id_lr_code("Site Code: " + site_id_lr_code);
+                                model.setSite_name("Site Name: " + site_name);
+                                model.setTravel_to_site("Travel To Site: "+ travel_to_site);
+                                model.setTravel_from_site("Travel from Site: "+ travel_from_site);
+                                model.setOdometer_reading("Odometer Reading: " + odometer_reading);
+                                model.setKilometers("Kilometers: " + kilometers);
+                                model.setStart_time("Start Time: " + start_time);
+                                model.setEnd_time("End Time: " + end_time);
+                                model.setBreak_time("Break Time: " + break_time);
+                                model.setHours_on_site("Hours on Site: " + hours_on_site);
                                 //                              model.setImage(image);
 
                                 /**
