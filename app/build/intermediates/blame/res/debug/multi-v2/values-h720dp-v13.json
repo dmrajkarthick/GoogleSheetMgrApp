@@ -14,21 +14,6 @@
                     }
                 }
             ]
-        },
-        {
-            "outputFile": "/Users/rkarthic/Downloads/rkarthic/AndroidStudioProjects/TimeSheet/C:\\Users\\rkarthic\\AndroidStudioProjects\\TimeSheet\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-h720dp-v13\\values-h720dp-v13.xml",
-            "map": [
-                {
-                    "source": "/Users/rkarthic/Downloads/rkarthic/AndroidStudioProjects/TimeSheet/C:\\Users\\rkarthic\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\48f958e5e76d4b1e3c82fa8850ea9f36\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "66",
-                        "endOffsets": "117"
-                    }
-                }
-            ]
         }
     ]
 }

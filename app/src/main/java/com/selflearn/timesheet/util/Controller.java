@@ -59,11 +59,14 @@ public class Controller {
         return null;
     }
 
-    public static JSONObject updateData(String id, String name) {
+    public static JSONObject updateData(String jobNumber, String clientName, String jobType, String siteID, String siteName, String travelToSite, String travelFromSite, String odometerReading,
+                                        String kmsDriven, String startTime, String endTime, String breakTime, String hoursOnSite) {
         try {
             OkHttpClient client = new OkHttpClient();
             Request request = new Request.Builder()
-                    .url(WAURL+"action=update&id="+id+"&name="+name)
+                    .url(WAURL+"action=update&jobNumber="+jobNumber+"&clientName="+clientName+"&jobType="+jobType+"&siteID="+siteID
+                            +"&siteName="+siteName+"&travelToSite="+travelToSite+"&travelFromSite="+travelFromSite+"&odometerReading="+odometerReading
+                            +"&kmsDriven="+kmsDriven +"&startTime="+startTime+"&endTime="+endTime+"&breakTime="+breakTime+"&hoursOnSite="+hoursOnSite)
                     .build();
             response = client.newCall(request).execute();
             //    Log.e(TAG,"response from gs"+response.body().string());

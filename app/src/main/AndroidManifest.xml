@@ -22,9 +22,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.InsertData"/>
-        <activity android:name=".activity.ReadData"/>
         <activity android:name=".activity.ReadAllData"/>
         <activity android:name=".activity.ShareContentActivity"/>
+        <activity android:name=".activity.DeleteData"/>
+        <activity android:name=".activity.UpdateData"/>
     </application>
 
 </manifest>

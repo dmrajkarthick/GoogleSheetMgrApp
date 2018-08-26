@@ -17,7 +17,7 @@
         android:padding="16dp">
 
         <TextView
-            android:id="@+id/content"
+            android:id="@+id/tv_clientName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -28,14 +28,129 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/maincontent"
+            android:id="@+id/tv_jobType"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/content"
+            android:layout_below="@+id/tv_clientName"
             android:layout_toLeftOf="@+id/card_toolbar"
             android:text="Description" />
+
+        <TextView
+            android:id="@+id/dateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tv_jobType"
+            android:layout_toLeftOf="@+id/card_toolbar"
+            android:text="date and time" />
+
+
+        <TextView
+            android:id="@+id/siteName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/dateTime"
+            android:layout_toLeftOf="@+id/card_toolbar"
+            android:text="date and time" />
+
+
+        <TextView
+            android:id="@+id/siteID_lr_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/siteName"
+            android:layout_toLeftOf="@+id/card_toolbar"
+            android:text="date and time" />
+
+
+
+        <TextView
+            android:id="@+id/travelToSite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/siteID_lr_code"
+            android:layout_toLeftOf="@+id/card_toolbar"
+            android:text="date and time" />
+
+        <TextView
+            android:id="@+id/travelFromSite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/travelToSite"
+            android:layout_toLeftOf="@+id/card_toolbar"
+            android:text="date and time" />
+
+
+        <TextView
+            android:id="@+id/tv_odometerReading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/travelFromSite"
+            android:layout_toLeftOf="@+id/card_toolbar"
+            android:text="date and time" />
+
+        <TextView
+            android:id="@+id/tv_kms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tv_odometerReading"
+            android:layout_toLeftOf="@+id/card_toolbar"
+            android:text="date and time" />
+
+        <TextView
+            android:id="@+id/tv_startTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tv_kms"
+            android:layout_toLeftOf="@+id/card_toolbar"
+            android:text="date and time" />
+
+        <TextView
+            android:id="@+id/tv_endTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tv_startTime"
+            android:layout_toLeftOf="@+id/card_toolbar"
+            android:text="date and time" />
+
+        <TextView
+            android:id="@+id/tv_breakTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tv_endTime"
+            android:layout_toLeftOf="@+id/card_toolbar"
+            android:text="date and time" />
+
+        <TextView
+            android:id="@+id/tv_hoursOnSite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tv_breakTime"
+            android:layout_toLeftOf="@+id/card_toolbar"
+            android:text="date and time" />
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/card_toolbar"

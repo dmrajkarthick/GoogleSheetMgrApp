@@ -10,6 +10,8 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -28,7 +30,10 @@
             </intent-filter>
         </activity>
         <activity android:name="com.selflearn.timesheet.activity.InsertData" />
-        <activity android:name="com.selflearn.timesheet.activity.ReadData" />
+        <activity android:name="com.selflearn.timesheet.activity.ReadAllData" />
+        <activity android:name="com.selflearn.timesheet.activity.ShareContentActivity" />
+        <activity android:name="com.selflearn.timesheet.activity.DeleteData" />
+        <activity android:name="com.selflearn.timesheet.activity.UpdateData" />
 
         <meta-data
             android:name="android.support.VERSION"

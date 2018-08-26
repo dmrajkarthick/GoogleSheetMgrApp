@@ -1,7 +1,7 @@
 package com.selflearn.timesheet.activity;
 
 import android.app.ProgressDialog;
-import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.selflearn.timesheet.MainActivity;
 import com.selflearn.timesheet.R;
 import com.selflearn.timesheet.util.Controller;
 
@@ -24,11 +25,11 @@ import org.json.JSONObject;
 
 public class InsertData extends AppCompatActivity{
 
-    private EditText et_jobNumber, et_clientName, et_jobType, et_siteID, et_siteName, et_travelToSite, et_travelFromSite, et_odometerReading,
+    private EditText et_clientName, et_jobType, et_siteID, et_siteName, et_travelToSite, et_travelFromSite, et_odometerReading,
                         et_kmsDriven, et_startTime, et_endTime, et_breakTime, et_hoursOnSite;
     private Button insertData;
 
-    String jobNumber, clientName, jobType, siteID, siteName, travelToSite, travelFromSite, odometerReading, kmsDriven, startTime, endTime, breakTime, hoursOnSite;
+    String clientName, jobType, siteID, siteName, travelToSite, travelFromSite, odometerReading, kmsDriven, startTime, endTime, breakTime, hoursOnSite;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -40,7 +41,6 @@ public class InsertData extends AppCompatActivity{
         insertData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                jobNumber = et_jobNumber.getText().toString();
                 clientName = et_clientName.getText().toString();
                 jobType = et_jobType.getText().toString();
                 siteID = et_siteID.getText().toString();
@@ -61,7 +61,6 @@ public class InsertData extends AppCompatActivity{
     }
 
     private void initialize() {
-        et_jobNumber = (EditText) findViewById(R.id.jobNumber);
         et_clientName = (EditText)findViewById(R.id.clientName);
         et_jobType = (EditText)findViewById(R.id.jobType);
         et_siteID = (EditText)findViewById(R.id.siteID);
@@ -75,6 +74,12 @@ public class InsertData extends AppCompatActivity{
         et_breakTime = (EditText) findViewById(R.id.breakTime);
         et_hoursOnSite = (EditText) findViewById(R.id.hoursOnSite);
         insertData = (Button)findViewById(R.id.insertData);
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
     }
 
     class InsertDataActivity extends AsyncTask<Void, Void, Void> {
@@ -91,7 +96,7 @@ public class InsertData extends AppCompatActivity{
             super.onPreExecute();
 
             dialog = new ProgressDialog(InsertData.this);
-            dialog.setTitle("Hey Wait Please...");
+            dialog.setTitle("Inserting Data, Please wait!...");
             dialog.setMessage("Inserting your values..");
             /*if(!isFinishing())
                 dialog.show();*/
@@ -101,7 +106,7 @@ public class InsertData extends AppCompatActivity{
         @Nullable
         @Override
         protected Void doInBackground(Void... params) {
-            JSONObject jsonObject = Controller.insertData(jobNumber, clientName, jobType, siteID, siteName, travelToSite, travelFromSite, odometerReading, kmsDriven, startTime, endTime, breakTime, hoursOnSite);
+            JSONObject jsonObject = Controller.insertData("blank", clientName, jobType, siteID, siteName, travelToSite, travelFromSite, odometerReading, kmsDriven, startTime, endTime, breakTime, hoursOnSite);
             Log.i(Controller.TAG, "Json obj ");
 
             try {
@@ -123,6 +128,8 @@ public class InsertData extends AppCompatActivity{
             super.onPostExecute(aVoid);
             dialog.dismiss();
             Toast.makeText(getApplicationContext(),result,Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(intent);
         }
     }
 }

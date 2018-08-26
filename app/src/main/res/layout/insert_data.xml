@@ -13,31 +13,6 @@
 
 
             <TextView
-                android:id="@+id/tv_jobNumber"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_alignBaseline="@+id/jobNumber"
-                android:layout_alignBottom="@+id/jobNumber"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:text="JOB NUMBER: "
-                android:textAlignment="gravity"
-                android:textColor="#808080"
-                android:textSize="18sp" />
-
-            <EditText
-                android:id="@+id/jobNumber"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"
-                android:layout_toEndOf="@+id/tv_jobNumber"
-                android:layout_toRightOf="@+id/tv_jobNumber"
-                android:text="" />
-
-
-            <TextView
                 android:id="@+id/tv_client"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
@@ -53,11 +28,11 @@
                 android:id="@+id/clientName"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:layout_alignLeft="@+id/jobNumber"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_alignStart="@+id/jobNumber"
                 android:layout_below="@+id/jobNumber"
+                android:layout_toEndOf="@+id/tv_client"
+                android:layout_toRightOf="@+id/tv_client"
                 android:text="" />
 
             <TextView
@@ -80,8 +55,8 @@
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/clientName"
-                android:layout_toEndOf="@+id/tv_jobNumber"
-                android:layout_toRightOf="@+id/tv_jobNumber"
+                android:layout_toEndOf="@+id/tv_jobType"
+                android:layout_toRightOf="@+id/tv_jobType"
                 android:text="" />
 
 

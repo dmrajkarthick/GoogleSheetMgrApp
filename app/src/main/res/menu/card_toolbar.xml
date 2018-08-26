@@ -3,17 +3,36 @@
     xmlns:compat="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:title="Update"
+        android:icon="@drawable/ic_action_update"
+        android:tooltipText="Update"
+        android:id="@+id/contentUpdate"
+        android:checked="true"
+        compat:showAsAction="never" />
+
+    <item
+        android:title="Delete"
+        android:icon="@drawable/ic_action_delete"
+        android:tooltipText="Delete"
+        android:id="@+id/contentDelete"
+        android:checked="true"
+        compat:showAsAction="never" />
+
+    <item
         android:title="Share"
         android:icon="@drawable/ic_menu_share"
+        android:tooltipText="Share"
         android:id="@+id/contentShare"
         android:numericShortcut="1"
-        compat:showAsAction="ifRoom"/>
+        compat:showAsAction="never"/>
+
 
     <item
         android:title="Bookmark"
         android:icon="@drawable/ic_menu_bookmark"
+        android:tooltipText="Bookmark"
         android:id="@+id/contentBookmark"
         android:checked="true"
-        compat:showAsAction="ifRoom" />
+        compat:showAsAction="never" />
 
 </menu>

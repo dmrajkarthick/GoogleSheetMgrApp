@@ -1,6 +1,310 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent" >
 
-</RelativeLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <RelativeLayout
+            android:id="@+id/form_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/tv_client"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignBaseline="@+id/clientName"
+                android:layout_alignBottom="@+id/clientName"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:text="CLIENT: "
+                android:textAlignment="gravity"
+                android:textColor="#808080"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/clientName"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/jobNumber"
+                android:layout_toEndOf="@+id/tv_client"
+                android:layout_toRightOf="@+id/tv_client"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/tv_jobType"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignBaseline="@+id/jobType"
+                android:layout_alignBottom="@+id/jobType"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:text="JOB TYPE: "
+                android:textAlignment="gravity"
+                android:textColor="#808080"
+                android:textSize="18sp" />
+
+
+            <EditText
+                android:id="@+id/jobType"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignLeft="@+id/clientName"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignStart="@+id/clientName"
+                android:layout_below="@+id/clientName"
+                android:text="" />
+
+
+            <TextView
+                android:id="@+id/tv_siteID"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tv_jobType"
+                android:text="SITE ID/LRD CODE: "
+                android:textAlignment="gravity"
+                android:textColor="#808080"
+                android:textSize="18sp" />
+
+
+            <EditText
+                android:id="@+id/siteID"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_above="@+id/siteName"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_toEndOf="@+id/tv_siteID"
+                android:layout_toRightOf="@+id/tv_siteID"
+                android:text="" />
+
+
+            <TextView
+                android:id="@+id/tv_siteName"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignBaseline="@+id/siteName"
+                android:layout_alignBottom="@+id/siteName"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:text="SITE NAME: "
+                android:textAlignment="gravity"
+                android:textColor="#808080"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/siteName"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_siteID"
+                android:layout_toEndOf="@+id/tv_siteName"
+                android:layout_toRightOf="@+id/tv_siteName"
+                android:hint="" />
+
+            <TextView
+                android:id="@+id/tv_travelToSite"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignBaseline="@+id/travelToSite"
+                android:layout_alignBottom="@+id/travelToSite"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:text="TRAVEL TO SITE: "
+                android:textAlignment="gravity"
+                android:textColor="#808080"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/travelToSite"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/siteName"
+                android:layout_toEndOf="@+id/tv_siteID"
+                android:layout_toRightOf="@+id/tv_siteID"
+                android:hint="" />
+
+            <TextView
+                android:id="@+id/tv_travelFromSite"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignBaseline="@+id/travelFromSite"
+                android:layout_alignBottom="@+id/travelFromSite"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:text="TRAVEL FROM SITE: "
+                android:textAlignment="gravity"
+                android:textColor="#808080"
+                android:textSize="18sp" />
+
+
+            <EditText
+                android:id="@+id/travelFromSite"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/travelToSite"
+                android:layout_toEndOf="@+id/tv_travelFromSite"
+                android:layout_toRightOf="@+id/tv_travelFromSite"
+                android:hint="" />
+
+            <TextView
+                android:id="@+id/tv_odometerReading"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignBaseline="@+id/odometerReading"
+                android:layout_alignBottom="@+id/odometerReading"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:text="ODOMETER READING: "
+                android:textAlignment="gravity"
+                android:textColor="#808080"
+                android:textSize="18sp" />
+
+
+            <EditText
+                android:id="@+id/odometerReading"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/travelFromSite"
+                android:layout_toEndOf="@+id/tv_odometerReading"
+                android:layout_toRightOf="@+id/tv_odometerReading"
+                android:hint="" />
+
+
+            <TextView
+                android:id="@+id/tv_kmsDriven"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tv_odometerReading"
+                android:text="KILOMETERS: "
+                android:textAlignment="gravity"
+                android:textColor="#808080"
+                android:textSize="18sp" />
+
+
+            <EditText
+                android:id="@+id/kmsDriven"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/odometerReading"
+                android:layout_toEndOf="@+id/tv_kmsDriven"
+                android:layout_toRightOf="@+id/tv_kmsDriven"
+                android:hint="" />
+
+            <TextView
+                android:id="@+id/tv_startTime"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tv_kmsDriven"
+                android:text="START TIME: "
+                android:textAlignment="gravity"
+                android:textColor="#808080"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/startTime"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/kmsDriven"
+                android:layout_toEndOf="@+id/tv_kmsDriven"
+                android:layout_toRightOf="@+id/tv_kmsDriven"
+                android:ems="10"
+                android:hint=""
+                android:inputType="time" />
+
+            <TextView
+                android:id="@+id/tv_endTime"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tv_startTime"
+                android:text="END TIME: "
+                android:textAlignment="gravity"
+                android:textColor="#808080"
+                android:textSize="18sp" />
+
+
+            <EditText
+                android:id="@+id/endTime"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/startTime"
+                android:layout_toEndOf="@+id/tv_endTime"
+                android:layout_toRightOf="@+id/tv_endTime"
+                android:ems="10"
+                android:hint=""
+                android:inputType="time" />
+
+            <TextView
+                android:id="@+id/tv_breakTime"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignBaseline="@+id/breakTime"
+                android:layout_alignBottom="@+id/breakTime"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:text="BREAK TIME: "
+                android:textAlignment="gravity"
+                android:textColor="#808080"
+                android:textSize="18sp" />
+
+
+            <EditText
+                android:id="@+id/breakTime"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignLeft="@+id/startTime"
+                android:layout_alignStart="@+id/startTime"
+                android:layout_below="@+id/endTime"
+                android:hint="" />
+
+            <TextView
+                android:id="@+id/tv_hoursOnSite"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tv_breakTime"
+                android:text="HOURS ON SITE: "
+                android:textAlignment="gravity"
+                android:textColor="#808080"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/hoursOnSite"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/breakTime"
+                android:layout_toEndOf="@+id/tv_travelToSite"
+                android:layout_toRightOf="@+id/tv_travelToSite"
+                android:hint="" />
+
+
+            <Button
+                android:id="@+id/updateData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hoursOnSite"
+                android:layout_centerHorizontal="true"
+                android:text="Update Data" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+
+</ScrollView>
